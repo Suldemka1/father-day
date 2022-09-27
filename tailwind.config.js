@@ -6,15 +6,6 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    // container: {
-    //   screens: {
-    //     sm: '480px',
-    //     md: '768px',
-    //     lg: '976px',
-    //     xl: '1440px',
-    //   },
-    // },
-
 
     colors: {
       'white': '#ffffff',
@@ -32,15 +23,15 @@ module.exports = {
       widest: '.50em',
     },
 
-    // screens: {
-    //   sm: '480px',
-    //   md: '768px',
-    //   lg: '976px',
-    //   xl: '1440px',
-    // },
+    screens: {
+      sm: '320px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px',
+    },
     extend: {
       fontFamily: {
-        'monserrat': ['Monccerrat', 'Arial', 'sans-serif'],
+        'monserrat': ['Montserrat'],
       }
     },
   },

@@ -2,8 +2,9 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="container mx-auto py-10">
-      <div className="flex flex-row justify-between items-center w-full">
+    <footer className="container w-full mx-auto py-10">
+
+      <div className="flex sm:flex-col md:flex-row justify-between items-center w-full">
         <div>
           <Image src={"/pgrants_logo_gp.png"} width={300} height={143} />{" "}
         </div>
@@ -15,20 +16,20 @@ const Footer = () => {
             </button>
           </div>
 
-          <div className="flex flex-row justify-between items-center py-4">
-            <menu className="flex flex-row justify-between w-full [&>li]:text-my-red [&>li]:font-semibold [&>li]:uppercase [&>li]:cursor-pointer">
-              <li>о проекте</li>
-              <li>категории конкурса</li>
-              <li>призы</li>
-              <li>новости</li>
-              <li>партнеры</li>
-              <li>герои</li>
+          <div className="flex sm:flex-col lg:flex-row justify-between items-center py-4">
+            <menu className="flex sm:flex-col lg:flex-row justify-between w-full [&>li]:text-my-red [&>li]:font-semibold [&>li]:uppercase [&>li]:cursor-pointer">
+              <li><a href={'#about'}>о проекте</a></li>
+              <li><a href={'#categories'}>категории конкурса</a></li>
+              <li><a href={'#prizes'}>призы</a></li>
+              <li><a href={'#news'}>новости</a></li>
+              <li><a href={'#partheners'}>партнеры</a></li>
+              <li><a href={'#heroes'}>герои</a></li>
             </menu>
           </div>
         </div>
       </div>
       <div className="flex justify-end">
-        <button className="rounded-full border-my-red border-2 shadow-md shadow-my-red">
+        <a href={'#header'} className="rounded-full border-my-red border-2 shadow-md shadow-my-red">
           <svg width={50} height={50}>
             <rect
               width={50}
@@ -39,7 +40,7 @@ const Footer = () => {
             />
             <path d="M14 28L25 18l10 10" stroke="#850303" strokeWidth={1} />
           </svg>
-        </button>
+        </a>
       </div>
     </footer>
   );

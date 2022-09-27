@@ -1,12 +1,7 @@
 import Image from "next/image";
+import {IPostCard} from "../../models/IPostCard";
 
-interface IPost {
-  title: string;
-  date: string;
-  image: string;
-}
-
-const PostCard = (params: IPost) => {
+const PostCard = (params: IPostCard) => {
   return (
     <div className="flex flex-col gap-5 max-w-[calc(260)]">
       <div className="flex justify-center">

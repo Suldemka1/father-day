@@ -1,14 +1,16 @@
 import Image from "next/image";
+import SectionLayout from "../layout/sectionLayout";
+import Pagename from "./pagename";
 
 const About = () => {
   return (
-    <div className="container mx-auto h-[calc(810px)] bg-[url('/io.webp')] bg-no-repeat">
-      <div id="header" className="w-full mx-auto">
-        <h1 className="text-[calc(40px)] text-my-red font-semibold text-center pb-12">О проекте</h1>
+    <SectionLayout id={'about'} className="container mx-auto bg-[url('/io.webp')] bg-no-repeat">
+      <div id="header" className="">
+        <Pagename title={'О проекте'} />
       </div>
 
-      <div id="target" className="flex flex-row">
-        <div className="flex flex-col gap-14 w-7/12 [&>p]:text-[calc(22px)] [&>p]:font-semibold">
+      <div id="target" className="flex flex-row justify-center">
+        <div className="flex flex-col gap-14 sm:w-full lg:w-7/12 [&>p]:text-[calc(22px)] [&>p]:font-semibold">
           <p className=" text-my-red ">
             Цель программы «РЕАЛЬНЫЙ ПАПА» – мотивировать российских отцов на
             примерах активных участников проекта, больше качественного времени
@@ -30,16 +32,20 @@ const About = () => {
           </p>
 
           <div className="flex flex-row gap-5">
-            <button className="w-[calc(200px)] text-white bg-my-red rounded-xl py-3">Посмотреть встречи</button>
-            <button className="w-[calc(200px)] text-white bg-my-red rounded-xl py-3">Участвовать в конкурсе</button>
+            <button className="w-[calc(200px)] text-white bg-my-red rounded-xl py-3">
+              Посмотреть встречи
+            </button>
+            <button className="w-[calc(200px)] text-white bg-my-red rounded-xl py-3">
+              Участвовать в конкурсе
+            </button>
           </div>
         </div>
 
-        <div className="w">
+        <div className="sm:hidden lg:block">
           <Image src={"/reading.webp"} width={476} height={630} />
         </div>
       </div>
-    </div>
+    </SectionLayout>
   );
 };
 
