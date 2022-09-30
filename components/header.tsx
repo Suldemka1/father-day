@@ -5,9 +5,12 @@ const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
-    <header id={'header'} className="container w-full sm:mx-10 lg:mx-auto">
+    <header id={'header'} className="container sm:w-fit lg:w-full sm:mx-10 lg:mx-auto">
       <div className="sm:hidden lg:flex flex-row justify-between items-center py-4">
-        <menu className="flex flex-row justify-between w-9/12 [&>li]:text-my-red [&>li]:font-semibold [&>li]:uppercase">
+        <menu className="flex flex-row justify-between w-9/12
+        {/*[&>li]:text-my-red */}
+        [&>li]:font-bold
+        [&>li]:font-semibold [&>li]:uppercase">
           <li><a href={'#about'}>о проекте</a></li>
           <li><a href={'#categories'}>категории конкурса</a></li>
           <li><a href={'#prizes'}>призы</a></li>
@@ -18,11 +21,11 @@ const Header = () => {
         </menu>
 
         <div id="vk_logo" className="">
-          <Image src={"/vk.webp"} width={200} height={50} />
+          <Image alt={'Tuvsu_logo 2.png'} src={"/vk.webp"} width={200} height={50} className={'cursor-pointer'} />
         </div>
       </div>
 
-      <nav>
+      <nav className={'w-fit'}>
         <section className="MOBILE-MENU lg:hidden py-10">
           <div
             className="HAMBURGER-ICON space-y-3"

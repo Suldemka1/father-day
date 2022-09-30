@@ -5,19 +5,21 @@ const Footer = () => {
     <footer className="container w-full mx-auto py-10">
 
       <div className="flex sm:flex-col md:flex-row justify-between items-center w-full">
-        <div>
-          <Image src={"/pgrants_logo_gp.png"} width={300} height={143} />{" "}
+        <div className={'flex items-center gap-2.5 font-bold'}>
+          <Image alt={'/Tuvsu_logo 2.png'} src={"/Tuvsu_logo 2.png"} width={100} height={100} />{" "}
+          <div>
+            <p>При поддержке Тувинского</p>
+            государственного университета
+          </div>
+
         </div>
 
         <div className="w-7/12">
-          <div className="flex justify-end">
-            <button className="rounded-lg border-2 border-my-red text-my-red font-semibold py-2 px-4">
-              Группа ВК
-            </button>
-          </div>
 
           <div className="flex sm:flex-col lg:flex-row justify-between items-center py-4">
-            <menu className="flex sm:flex-col lg:flex-row justify-between w-full [&>li]:text-my-red [&>li]:font-semibold [&>li]:uppercase [&>li]:cursor-pointer">
+            <menu className="flex sm:flex-col lg:flex-row justify-between w-full
+            {/*[&>li]:text-my-red */}
+            [&>li]:font-bold [&>li]:uppercase [&>li]:cursor-pointer">
               <li><a href={'#about'}>о проекте</a></li>
               <li><a href={'#categories'}>категории конкурса</a></li>
               <li><a href={'#prizes'}>призы</a></li>

@@ -10,7 +10,7 @@ module.exports = {
     colors: {
       'white': '#ffffff',
       'gray': '#dedede',
-      'my-red' : '#850303',
+      'my-red' : 'rgb(20, 74, 12)',
     },
 
     letterSpacing: {
@@ -24,7 +24,7 @@ module.exports = {
     },
 
     screens: {
-      sm: '320px',
+      sm: '290px',
       md: '768px',
       lg: '976px',
       xl: '1440px',

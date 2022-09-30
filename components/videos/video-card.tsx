@@ -3,7 +3,7 @@ import {IVideo} from "../../models/IVideo";
 
 const VideoCard = (params: IVideo) => {
 	return (
-		<div className={'flex flex-col gap-3 w-5/12 py-10'}>
+		<div className={'flex flex-col gap-3 sm:w-10/12 md:w-5/12 py-10'}>
 
 			<video controls={true}>
 				<source src={params.video} type={'video/mp4'}/>

@@ -4,13 +4,13 @@ import Pagename from "./pagename";
 
 const About = () => {
   return (
-    <SectionLayout id={'about'} className="container mx-auto bg-[url('/io.webp')] bg-no-repeat">
+    <SectionLayout id={'about'} className="container mx-auto bg-[url('/io.webp')] bg-no-repeat py-10">
       <div id="header" className="">
         <Pagename title={'О проекте'} />
       </div>
 
       <div id="target" className="flex flex-row justify-center">
-        <div className="flex flex-col gap-14 sm:w-full lg:w-7/12 [&>p]:text-[calc(22px)] [&>p]:font-semibold">
+        <div className="flex flex-col gap-14 sm:w-full lg:w-7/12 sm:px-10 [&>p]:text-[calc(22px)] [&>p]:font-semibold">
           <p className=" text-my-red ">
             Цель программы «РЕАЛЬНЫЙ ПАПА» – мотивировать российских отцов на
             примерах активных участников проекта, больше качественного времени
@@ -31,18 +31,18 @@ const About = () => {
             ребенком.
           </p>
 
-          <div className="flex flex-row gap-5">
-            <button className="w-[calc(200px)] text-white bg-my-red rounded-xl py-3">
+          <div className="flex flex-row sm:justify-between md:justify-start gap-5">
+            <button className="w-fit text-white bg-my-red rounded-xl py-3 px-3">
               Посмотреть встречи
             </button>
-            <button className="w-[calc(200px)] text-white bg-my-red rounded-xl py-3">
+            <button className="w-fit text-white bg-my-red rounded-xl py-3 px-3">
               Участвовать в конкурсе
             </button>
           </div>
         </div>
 
         <div className="sm:hidden lg:block">
-          <Image src={"/reading.webp"} width={476} height={630} />
+          <Image alt={'Tuvsu_logo 2.png'} src={"/reading.webp"} width={476} height={630} />
         </div>
       </div>
     </SectionLayout>
