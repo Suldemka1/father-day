@@ -8,7 +8,7 @@ const Contacts = () => {
 
 			<h3 className={'text-2xl text-center font-semibold'}>someemail@mail.ru</h3>
 			<div id={'social-media'} className={'flex items-center justify-center gap-5'}>
-				<Image src={'/vk_logo.png'} width={40} height={40}/>
+				<Image alt={'Tuvsu_logo 2.png'} src={'/vk_logo.png'} width={40} height={40}/>
 			</div>
 		</div>
 	);
