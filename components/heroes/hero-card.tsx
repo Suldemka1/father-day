@@ -9,7 +9,7 @@ interface IHero {
 const HeroCard = (params: IHero) =>
 	<div className="flex flex-col gap-5 bg-gray max-w-[calc(260px)]">
 		<div>
-			<Image src={params.image} width={260} height={260} objectFit="cover"/>
+			<Image alt="some.png" src={params.image} width={260} height={260} objectFit="cover"/>
 		</div>
 
 		<div className="flex flex-col gap-4 p-3.5">
@@ -27,4 +27,4 @@ const HeroCard = (params: IHero) =>
 	</div>;
 
 
-export default HeroCard; 
+export default HeroCard;

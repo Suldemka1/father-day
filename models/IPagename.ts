@@ -1,3 +1,3 @@
 export interface IPagename {
-	title: string
+	title: string;
 }

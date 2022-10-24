@@ -5,7 +5,9 @@ import FormData from "form-data";
 
 const input = "border rounded-md py-2 px-3"
 
+
 const Contest = () => {
+
 	//states
 	const [surname, setSurname] = useState<string>('')
 	const [name, setName] = useState<string>(' ')
@@ -20,7 +22,7 @@ const Contest = () => {
 	const [story, setStory] = useState<string>('')
 	const [photos, setPhotos] = useState([])
 	const [video, setVideo] = useState<File>()
-	const [videoLink, setVideoLink] = useState<string>('')
+	const [video_link, setVideo_link] = useState<string>('')
 
 	const UploadToServer = async () => {
 
@@ -47,7 +49,7 @@ const Contest = () => {
 		}
 
 		formData.append('video', video)
-		formData.append('video_link', videoLink)
+		formData.append('video_link', video_link)
 
 		//configuration
 		const config = {
@@ -104,14 +106,15 @@ const Contest = () => {
                             <textarea rows={4} placeholder={'Рассказ о Реальном Папе'}
                                       onChange={e => setStory(e.target.value)}
                                       className={"border rounded-md px-3 py-2"}/>}
+
 					</div>
 
 					<div>
-						<label htmlFor={'video'}>
+						<label htmlFor={'images'}>
 							Загрузите ваши фотографии (не более 10)
 						</label>
 						<input id={'images'} style={{display: "none"}} type={"file"} className={"bg-my-red"}
-							   accept={'image/*'} multiple
+							   multiple
 							   onChange={(event: ChangeEvent<HTMLInputElement>) => {
 								   // @ts-ignore
 								   return setPhotos(event.target.files)
@@ -122,14 +125,14 @@ const Contest = () => {
 						type === 'Видео-история' &&
 
                         <div>
-							<label htmlFor={'video'}>
-								Загрузите ваше видео
+                            <label htmlFor={'video'}>
+                                Загрузите ваше видео
                                 <input id={'video'} style={{display: "none"}} type={"file"} accept={'video/*'}
                                        onChange={(event: ChangeEvent<HTMLInputElement>) => {
 										   // @ts-ignore
 										   return setVideo(event.target.files[0]);
 									   }}/>
-							</label>
+                            </label>
 
                         </div>
 					}
